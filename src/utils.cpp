@@ -5,7 +5,7 @@
 #include <cmath>
 
 using namespace std;
-typedef vector<vector<double>> twod_array; 
+typedef vector<vector<double>> twod_array; // Special data type to store arrays.
 
 void read_cosine(twod_array& noise_data, twod_array& gt){
     // Read noisy cosine data for input
@@ -71,13 +71,7 @@ twod_array matmul(twod_array A, twod_array B){
         throw runtime_error("Columns of A not equals rows of B");
     
     twod_array C(Ar, vector<double>(Bc));
-    for (int i=0; i<Ar; i++){
-        for (int j=0; j<Bc; j++){
-            for (int k=0; k<Ac; k++){
-                C[i][j] += A[i][k] * B[k][j];
-            }
-        }
-    }
+    // TODO: Compute matrix multplication
     return C;
 }
 
@@ -89,11 +83,7 @@ twod_array matadd(twod_array A, twod_array B){
     if ((Ar != Br) || (Ac != Bc))
         throw runtime_error("Two matrices should be of same shape");
     twod_array C(Ar, vector<double>(Ac));
-    for (int i=0; i<Ar; i++){
-        for (int j=0; j<Ac; j++){
-            C[i][j] = A[i][j] + B[i][j];
-        }
-    }
+    // TODO: Compute matrix addition
     return C;
 }
 
@@ -105,11 +95,7 @@ twod_array matsub(twod_array A, twod_array B){
     if ((Ar != Br) || (Ac != Bc))
         throw runtime_error("Two matrices should be of same shape");
     twod_array C(Ar, vector<double>(Ac));
-    for (int i=0; i<Ar; i++){
-        for (int j=0; j<Ac; j++){
-            C[i][j] = A[i][j] - B[i][j];
-        }
-    }
+    // TODO: Compute matrix subtraction
     return C;
 }
 
@@ -117,11 +103,7 @@ twod_array matpow(twod_array A, int p){
     int Ar = A.size();
     int Ac = A[0].size();
     twod_array C(Ar, vector<double>(Ac));
-    for (int i=0; i<Ar; i++){
-        for (int j=0; j<Ac; j++){
-            C[i][j] = pow(A[i][j], p);
-        }
-    }
+    // TODO: Compute power 'p' of matrix per each element.
     return C;
 }
 
@@ -129,11 +111,7 @@ double matsum(twod_array A){
     int Ar = A.size();
     int Ac = A[0].size();
     double sum_val = 0.0;
-    for (int i=0; i<Ar; i++){
-        for (int j=0; j<Ac; j++){
-            sum_val += A[i][j];
-        }
-    }
+    // TODO: Compute sum of all elements in the matrix.
     return sum_val;
 }
 
@@ -141,11 +119,7 @@ twod_array mattranspose(twod_array A){
     int Ar = A.size();
     int Ac = A[0].size();
     twod_array A_t(Ac, vector<double>(Ar));
-    for (int i=0; i<Ar; i++){
-        for (int j=0; j<Ac; j++){
-            A_t[j][i] = A[i][j];
-        }
-    }
+    // TODO: Compute transpose of the matrix.
     return A_t;
 }
 
@@ -157,11 +131,7 @@ twod_array hadamard_product(twod_array A, twod_array B){
     if ((Ar != Br) || (Ac != Bc))
         throw runtime_error("Two matrices should be of same shape");
     twod_array C(Ar, vector<double>(Ac));
-    for (int i=0; i<Ar; i++){
-        for (int j=0; j<Ac; j++){
-            C[i][j] = A[i][j] * B[i][j];
-        }
-    }
+    // TODO: Compute element wise product of the matrices.
     return C;
 }
 

@@ -5,18 +5,13 @@
 using namespace std;
 
 twod_array sigmoid(twod_array matrix){
-    for (int i=0; i<matrix.size(); i++){
-        for (int j=0; j<matrix[0].size(); j++){
-            matrix[i][j] = 1 / (1 + exp(-1*matrix[i][j]));
-        }
-    }
+    // TODO: Implemet sigmoid activation.
     return matrix;
 }
 
 double cost(twod_array gt, twod_array h){
-    twod_array error = matpow(matsub(gt, h), 2);
-    double sum_val = matsum(error);
-    return 0.5 * sum_val;
+    //TODO: Compute mse loss
+    return 0.0;
 }
 
 void compute_gradients(twod_array w_2, twod_array w_1, twod_array bias, twod_array x, twod_array y, 
