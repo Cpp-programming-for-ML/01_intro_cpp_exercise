@@ -159,15 +159,6 @@ twod_array ele_product(twod_array A, double B){
     return C;
 }
 
-void printMatrix(const twod_array& matrix){
-    for (const auto& row : matrix) {
-        for (double val : row) {
-            std::cout << val << " ";
-        }
-        std::cout << std::endl;
-    }
-}
-
 bool compare(twod_array& v1, twod_array& v2){
     for (int i = 0; i < v1.size(); ++i) {
         for (int j = 0; j < v1[i].size(); ++j) {
