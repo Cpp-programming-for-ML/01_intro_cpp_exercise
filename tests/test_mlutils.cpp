@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// Test sigmoid activation
 void test_sigmoid(){
     twod_array A = {{1.0,0.6,0.79},
                  {15.9,-22.65,49.99},
@@ -26,6 +27,7 @@ void test_sigmoid(){
     assert(compare(res, C));
 }
 
+// Test mse cost function
 void test_cost(){
     twod_array gt = {{-1.34472803, -0.68036661,  0.50162227},
                      { 0.21238899,  0.44488505, -1.11385444},

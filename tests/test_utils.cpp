@@ -6,6 +6,7 @@
 
 using namespace std;
 
+// Test matrix multplication
 void test_matrix_multiplication(){
     twod_array A = {{1.0,2.0,3.0},
                  {4.0,5.0,6.0}};
@@ -31,6 +32,7 @@ void test_matrix_multiplication(){
     assert(compare(res, C));
 }
 
+// Test matrix addition
 void test_matrix_addition(){
     twod_array A = {{1.0,2.0,3.0},
                  {4.0,5.0,6.0}};
@@ -53,6 +55,7 @@ void test_matrix_addition(){
     assert(compare(res, C));
 }
 
+// Test matrix subtraction
 void test_matrix_subtraction(){
     twod_array A = {{1.0,2.0,3.0},
                  {4.0,5.0,6.0}};
@@ -75,6 +78,7 @@ void test_matrix_subtraction(){
     assert(compare(res, C));
 }
 
+// Test power of matrix (element-wise)
 void test_matrix_power(){
     twod_array A = {{1.0, 2.0},
                     {4.0, 5.0}};
@@ -88,6 +92,7 @@ void test_matrix_power(){
     assert(compare(res, C));
 }
 
+// Test sum of all elements in matrix
 void test_matrix_sum(){
     twod_array A = {{1.0, 2.0},
                     {4.0, 5.0}};
@@ -103,6 +108,7 @@ void test_matrix_sum(){
     assert(abs(res-C)<1e-10);
 }
 
+// Test transpose of matrix
 void test_matrix_transpose(){
     twod_array A = {{1.0, 2.0},
                     {4.0, 5.0}};
@@ -120,6 +126,7 @@ void test_matrix_transpose(){
     assert(compare(res, C));
 }
 
+// Test matrix hadamard product.
 void test_hadamard_product(){
     twod_array A = {{1.0, 2.0},
                     {4.0, 5.0}};
